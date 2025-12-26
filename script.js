@@ -51,9 +51,29 @@ let date = new Date();
             weather_img.src = "rain.png";
              break;
     }
+  switch(weather_data.weather[0].main){
+        case 'Clouds':
+           alertbox.innerHTML=("☁️ Hmm...It's cloudy outside.🧥 You might want to carry a light jacket.");
+            break;
+        case 'Clear':
+             alertbox.innerHTML=("🌞 Wow! Perfect day to dry your clothes outside!, Great weather for a walk.");
+            break;
+        case 'Haze':
+               alertbox.innerHTML=("🌫️ Uh oh...It's hazy outside.😷 Consider wearing a mask and limit outdoor activities.");
+             break;
+        case 'Mist':
+               alertbox.innerHTML=("👀 Easy there...It's misty outside And 🚗 Drive carefully and use low-beam lights.");
+              break;
+        case 'Snow':
+              alertbox.innerHTML=("🥶 Brrr! It's snowing outside, 🧥🧣🧤🥾 Bundle up and stay warm.");
+             break;
+        case 'Rain':
+              alertbox.innerHTML=("🌧️ Oh no! Carry an umbrella or raincoat today ☔, Better to dry clothes indoors today, Avoid outdoor activitiess.");
+             break;}
     
 }
 searchBtn.addEventListener('click',()=>{
     checkweather(inputBox.value)
 })
+
 
