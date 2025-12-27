@@ -50,6 +50,9 @@ let date = new Date();
         case 'Rain':
             weather_img.src = "rain.png";
              break;
+      case 'Fog':
+            weather_img.src = "mist.png";
+             break; 
     }
   switch(weather_data.weather[0].main){
         case 'Clouds':
@@ -69,11 +72,16 @@ let date = new Date();
              break;
         case 'Rain':
               alertbox.innerHTML=("🌧️ Oh no! Carry an umbrella or raincoat today ☔, Better to dry clothes indoors today, Avoid outdoor activitiess.");
+             break;
+        case 'Fog':
+              alertbox.innerHTML=("👀...Dense fog expected, drive carefully 🌫️🚗,Low visibility due to fog use headlights 🌫️💡");
              break;}
+  }
     
 }
 searchBtn.addEventListener('click',()=>{
     checkweather(inputBox.value)
 })
+
 
 
