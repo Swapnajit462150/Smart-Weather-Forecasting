@@ -53,6 +53,9 @@ let date = new Date();
       case 'Fog':
             weather_img.src = "mist.png";
              break; 
+       case 'Smoke':
+            weather_img.src = "mist.png";
+             break; 
     }
   switch(weather_data.weather[0].main){
         case 'Clouds':
@@ -75,13 +78,18 @@ let date = new Date();
              break;
         case 'Fog':
               alertbox.innerHTML=("👀...Dense fog expected, drive carefully 🌫️🚗,Low visibility due to fog use headlights 🌫️💡");
-             break;}
+             break;
+     case 'Smoke':
+              alertbox.innerHTML=("🌫️ Smoke in the air – limit outdoor activities 🌫️😷, Poor air quality detected – wear a mask if going outside 😷⚠️");
+             break;
+  }
   }
     
 }
 searchBtn.addEventListener('click',()=>{
     checkweather(inputBox.value)
 })
+
 
 
 
