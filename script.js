@@ -82,12 +82,13 @@ let date = new Date();
      case 'Smoke':
               alertbox.innerHTML=("🌫️ Smoke in the air – limit outdoor activities 🌫️😷, Poor air quality detected – wear a mask if going outside 😷⚠️");
              break;
-  }
+  }}
     
 }
 searchBtn.addEventListener('click',()=>{
     checkweather(inputBox.value)
 })
+
 
 
 
